@@ -52,11 +52,6 @@
 </head>
 <body class="text-slate-800">
 
-    <!-- BANNER DE DEMONSTRAÇÃO (OBRIGATÓRIO) -->
-    <div class="bg-amber-100 text-amber-800 text-center py-2 text-xs font-semibold uppercase tracking-wider border-b border-amber-200">
-        ⚠️ ESTE É UM SITE de DEMONSTRAÇÃO. As reservas simulam a experiência real.
-    </div>
-
     <!-- NAVIGATION (Architectural Minimalism) -->
     <nav id="main-nav" class="glass fixed top-0 left-0 w-full z-50 transition-all duration-500 px-6 py-4">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
@@ -263,6 +258,9 @@
             </div>
         </div>
         <div class="max-w-6xl mx-auto pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+            <p class="text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                ⚠️ ESTE É UM SITE de DEMONSTRAÇÃO. As reservas simulam a experiência real.
+            </p>
             <p>&copy; 2023 Zen Studio. Todos os direitos reservados.</p>
         </div>
     </footer>
@@ -393,5 +391,8 @@
             if (event.target == modal) closeBooking();
         }
     </script>
+    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-xs font-semibold border border-amber-200 shadow-xl z-40 text-center whitespace-nowrap transition-all hover:scale-105 cursor-default">
+        ⚠️ ESTE É UM SITE de DEMONSTRAÇÃO. As reservas simulam a experiência real.
+    </div>
 </body>
 </html>
