@@ -1,0 +1,20 @@
+<svg width="250" height="50" viewBox="0 0 250 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3b82f6" />
+            <stop offset="100%" stop-color="#06b6d4" />
+        </linearGradient>
+    </defs>
+    <!-- Premium Tech Symbol: Stylized Diamond / Node -->
+    <path d="M25 10L35 25L25 40L15 25L25 10Z" stroke="url(#brandGradient)" stroke-width="4" stroke-linejoin="round" />
+    <path d="M25 10V40M15 25H35" stroke="url(#brandGradient)" stroke-width="2" opacity="0.5" />
+    <circle cx="25" cy="10" r="3" fill="#06b6d4" />
+    <circle cx="25" cy="40" r="3" fill="#06b6d4" />
+    <circle cx="15" cy="25" r="3" fill="#06b6d4" />
+    <circle cx="35" cy="25" r="3" fill="#06b6d4" />
+    <circle cx="25" cy="25" r="3" fill="#3b82f6" />
+
+    <!-- Clean High-End Typography -->
+    <text x="55" y="32" fill="white" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: -0.5px;">Roniel</text>
+    <text x="130" y="32" fill="url(#brandGradient)" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: -0.5px;">Digital</text>
+</svg>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Studio | Estética e Bem-Estar</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display para luxo e Inter para clareza -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfc;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+        }
+        /* Animação customizada para os links do menu overlay */
+        .menu-link {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .menu-open .menu-link {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        /* Fundo Premium para o Menu Overlay */
+        #mobile-menu {
+            background-image: url('assets/images/zem2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        #mobile-menu::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(252, 252, 252, 0.8); /* Off-white suave */
+            backdrop-filter: blur(25px);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- BANNER DE DEMONSTRAÇÃO (OBRIGATÓRIO) -->
+    <div class="bg-amber-100 text-amber-800 text-center py-2 text-xs font-semibold uppercase tracking-wider border-b border-amber-200">
+        ⚠️ ESTE É UM SITE de DEMONSTRAÇÃO. As reservas simulam a experiência real.
+    </div>
+
+    <!-- NAVIGATION (Architectural Minimalism) -->
+    <nav id="main-nav" class="glass fixed top-0 left-0 w-full z-50 transition-all duration-500 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="font-serif text-2xl font-bold text-emerald-800 tracking-tight z-50">Zen<span class="text-emerald-600">Studio</span></a>
+
+            <div class="flex items-center space-x-6 z-50">
+                <a href="#contato" class="hidden sm:block bg-emerald-700 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-emerald-800 transition-all shadow-md">Agendar</a>
+
+                <!-- Luxury Menu Toggle -->
+                <button id="menu-btn" class="text-emerald-800 focus:outline-none group flex items-center space-x-2">
+                    <span class="text-xs uppercase tracking-widest font-bold hidden sm:block group-hover:text-emerald-600 transition-colors">Menu</span>
+                    <div class="relative w-6 h-5">
+                        <span id="line-1" class="absolute block w-6 h-0.5 bg-emerald-800 transition-all duration-300 top-0"></span>
+                        <span id="line-2" class="absolute block w-6 h-0.5 bg-emerald-800 transition-all duration-300 top-2"></span>
+                        <span id="line-3" class="absolute block w-6 h-0.5 bg-emerald-800 transition-all duration-300 top-4"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FULL SCREEN OVERLAY MENU -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[60] transition-all duration-500 ease-in-out overflow-hidden">
+        <div class="absolute top-6 right-6 z-[70]">
+            <button id="close-menu" class="text-emerald-800 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div id="menu-content" class="relative z-10 h-full flex flex-col justify-center items-center space-y-8 text-center">
+            <a href="#inicio" class="menu-link text-4xl lg:text-6xl font-serif text-slate-900 hover:text-emerald-700 transition-all opacity-0 translate-y-10" style="transition-delay: 0.1s">Início</a>
+            <a href="#sobre" class="menu-link text-4xl lg:text-6xl font-serif text-slate-900 hover:text-emerald-700 transition-all opacity-0 translate-y-10" style="transition-delay: 0.2s">O Studio</a>
+            <a href="#servicos" class="menu-link text-4xl lg:text-6xl font-serif text-slate-900 hover:text-emerald-700 transition-all opacity-0 translate-y-10" style="transition-delay: 0.3s">Serviços</a>
+            <a href="#faq" class="menu-link text-4xl lg:text-6xl font-serif text-slate-900 hover:text-emerald-700 transition-all opacity-0 translate-y-10" style="transition-delay: 0.4s">FAQ</a>
+            <a href="#contato" class="menu-link text-4xl lg:text-6xl font-serif text-emerald-700 hover:text-emerald-800 transition-all opacity-0 translate-y-10" style="transition-delay: 0.5s">Agendar Agora</a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <span class="text-emerald-700 font-semibold tracking-widest uppercase text-sm">Bem-estar & Equilíbrio</span>
+                <h1 class="font-serif text-5xl lg:text-7xl text-slate-900 leading-tight">Sinta a leveza de um <span class="text-emerald-700 italic">corpo renovado.</span></h1>
+                <p class="text-slate-600 text-lg leading-relaxed max-w-md">
+                    No Zen Studio, unimos técnicas milenares de relaxamento com a modernidade da estética avançada para criar um refúgio de paz no seu dia a dia.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#servicos" class="bg-emerald-700 text-white px-8 py-4 rounded-full text-center font-semibold hover:bg-emerald-800 transition-all shadow-lg shadow-emerald-200">Conhecer Procedimentos</a>
+                    <a href="#sobre" class="border border-slate-200 text-slate-600 px-8 py-4 rounded-full text-center font-semibold hover:bg-slate-50 transition-all">Sobre Nós</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-4 -left-4 w-64 h-64 bg-emerald-100 rounded-full filter blur-3xl opacity-70"></div>
+                <img src="assets/images/zem1.jpg" alt="Ambiente Zen" class="relative z-10 rounded-3xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden md:block">
+                    <p class="text-emerald-800 font-bold text-2xl">100%</p>
+                    <p class="text-slate-500 text-xs uppercase tracking-tighter">Satisfação do Cliente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE SECTION -->
+    <section id="sobre" class="py-20 bg-slate-50 px-6">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="relative order-2 lg:order-1">
+                <div class="absolute -top-4 -right-4 w-64 h-64 bg-emerald-100 rounded-full filter blur-3xl opacity-70"></div>
+                <img src="assets/images/zem2.jpg" alt="Cuidado Zen" class="relative z-10 rounded-3xl shadow-xl -rotate-2 hover:rotate-0 transition-transform duration-500">
+            </div>
+            <div class="text-center lg:text-left space-y-8 order-1 lg:order-2">
+                <h2 class="font-serif text-4xl text-slate-900">Um refúgio urbano de serenidade</h2>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    Fundado com a missão de resgatar a conexão entre mente e corpo, o Zen Studio não é apenas uma clínica de estética. É um espaço desenhado para que você possa desconectar do ruído externo e reconectar-se com sua essência através de terapias sensoriais e cuidados especializados.
+                </p>
+                <div class="grid grid-cols-3 gap-4 pt-8">
+                    <div class="p-4">
+                        <p class="font-bold text-emerald-800 text-xl">Natureza</p>
+                        <p class="text-slate-500 text-sm">Produtos Orgânicos</p>
+                    </div>
+                    <div class="p-4 border-x border-slate-200">
+                        <p class="font-bold text-emerald-800 text-xl">Silêncio</p>
+                        <p class="text-slate-500 text-sm">Ambiente Isolado</p>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold text-emerald-800 text-xl">Cuidado</p>
+                        <p class="text-slate-500 text-sm">Terapia Personalizada</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS SECTION (CATÁLAGO INTERATIVO) -->
+    <section id="servicos" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="font-serif text-4xl text-slate-900">Nossas Experiências</h2>
+                <p class="text-slate-500 max-w-xl mx-auto">Escolha o cuidado que seu corpo merece hoje. Cada procedimento é adaptado às suas necessidades.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-slate-100 transition-all duration-300 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-700 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-2xl text-slate-900">Drenagem Linfática Localizada</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Redução de inchaço e eliminação de toxinas com manobras suaves e precisas.</p>
+                        <p class="text-emerald-700 font-bold text-3xl">R$ 120,00</p>
+                    </div>
+                    <button onclick="openBooking('Drenagem Linfática Localizada', '120,00')" class="mt-8 w-full py-4 rounded-xl bg-emerald-700 text-white font-semibold hover:bg-emerald-800 transition-all">Reservar Horário</button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-slate-100 transition-all duration-300 flex flex-col justify-between shadow-sm">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-700 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-2xl text-slate-900">Massagem Relaxante com Pedras Quentes</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Alívio profundo de tensões musculares e relaxamento mental absoluto.</p>
+                        <p class="text-emerald-700 font-bold text-3xl">R$ 180,00</p>
+                    </div>
+                    <button onclick="openBooking('Massagem Relaxante com Pedras Quentes', '180,00')" class="mt-8 w-full py-4 rounded-xl bg-emerald-700 text-white font-semibold hover:bg-emerald-800 transition-all">Reservar Horário</button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-slate-100 transition-all duration-300 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-700 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-2xl text-slate-900">Limpeza de Pele Glow</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Renovação celular profunda para uma pele iluminada, hidratada e sem impurezas.</p>
+                        <p class="text-emerald-700 font-bold text-3xl">R$ 150,00</p>
+                    </div>
+                    <button onclick="openBooking('Limpeza de Pele Glow', '150,00')" class="mt-8 w-full py-4 rounded-xl bg-emerald-700 text-white font-semibold hover:bg-emerald-800 transition-all">Reservar Horário</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-20 bg-slate-50 px-6">
+        <div class="max-w-3xl mx-auto space-y-12">
+            <div class="text-center">
+                <h2 class="font-serif text-4xl text-slate-900">Dúvidas Comuns</h2>
+            </div>
+            <div class="space-y-4">
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 transition-all cursor-pointer">
+                    <summary class="flex justify-between items-center font-semibold text-slate-800 list-none">
+                        <span>Preciso agendar com antecedência?</span>
+                        <span class="group-open:rotate-180 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">Sim, recomendamos o agendamento prévio para garantirmos a melhor experiência e tranquilidade no seu atendimento.</p>
+                </details>
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 transition-all cursor-pointer">
+                    <summary class="flex justify-between items-center font-semibold text-slate-800 list-none">
+                        <span>Quais formas de pagamento vocês aceitam?</span>
+                        <span class="group-open:rotate-180 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">Aceitamos cartões de crédito, débito e Pix.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contato" class="bg-slate-900 text-white pt-20 pb-10 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 mb-16">
+            <div class="space-y-6">
+                <img src="assets/images/minha-logo.svg" alt="Zen Studio Logo" class="h-12 w-auto mb-4">
+                <p class="text-slate-400 leading-relaxed">Transformando a rotina em rituais de autocuidado e bem-estar.</p>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-semibold text-lg uppercase tracking-widest">Links</h4>
+                <ul class="space-y-3 text-slate-400">
+                    <li><a href="#inicio" class="hover:text-emerald-400 transition-colors">Início</a></li>
+                    <li><a href="#sobre" class="hover:text-emerald-400 transition-colors">O Studio</a></li>
+                    <li><a href="#servicos" class="hover:text-emerald-400 transition-colors">Serviços</a></li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-semibold text-lg uppercase tracking-widest">Contato</h4>
+                <p class="text-slate-400">Rua da Serenidade, 123<br>Bairro do Bem-Estar, Cidade-SP</p>
+                <p class="text-slate-400">contato@zenstudio.com</p>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+            <p>&copy; 2023 Zen Studio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- BOOKING MODAL -->
+    <div id="modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-6 bg-slate-900/60 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-md rounded-3xl shadow-2xl p-8 relative animate-in fade-in zoom-in duration-300">
+            <button onclick="closeBooking()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div class="text-center space-y-4 mb-8">
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-//9 5h.01M12 20h.01M7 20h.01M17 20h.01M12 16h.01M7 16h.01M17 16h.01M12 12h.01M7 12h.01M17 12h.01M12 8h.01M7 8h.01M17 8h.01" />
+                    </svg>
+                </div>
+                <h3 class="font-serif text-2xl text-slate-900">Finalizar Reserva</h3>
+                <p id="modal-service-name" class="text-emerald-700 font-semibold"></p>
+            </div>
+
+            <form id="booking-form" class="space-y-6">
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Dia de preferência</label>
+                    <select id="weekday" required class="w-full p-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-emerald-500 focus:outline-none bg-slate-50">
+                        <option value="" disabled selected>Selecione um dia...</option>
+                        <option value="Segunda-feira">Segunda-feira</option>
+                        <option value="Terça-feira">Terça-feira</option>
+                        <option value="Quarta-feira">Quarta-feira</option>
+                        <option value="Quinta-feira">Quinta-feira</option>
+                        <option value="Sexta-feira">Sexta-feira</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full py-4 rounded-xl bg-emerald-700 text-white font-semibold hover:bg-emerald-800 transition-all shadow-lg shadow-emerald-100">
+                    Confirmar via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // --- SMART NAV & LUXURY MENU ---
+        const mainNav = document.getElementById('main-nav');
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        let lastScrollY = window.scrollY;
+
+        // Smart Scroll: Esconde ao descer, mostra ao subir
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                mainNav.style.transform = 'translateY(-100%)';
+            } else {
+                mainNav.style.transform = 'translateY(0)';
+            }
+            lastScrollY = window.scrollY;
+        });
+
+        // Toggle Luxury Menu
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.classList.add('menu-open');
+                menuLinks.forEach((link, index) => {
+                    link.style.opacity = '1';
+                    link.style.transform = 'translateY(0)';
+                });
+                // Animação do Hamburguer
+                document.getElementById('line-1').style.transform = 'rotate(45deg) translate(5px, 6px)';
+                document.getElementById('line-2').style.opacity = '0';
+                document.getElementById('line-3').style.transform = 'rotate(-45deg) translate(5px, -6px)';
+            }, 10);
+        });
+
+        function closeLuxuryMenu() {
+            menuLinks.forEach(link => {
+                link.style.opacity = '0';
+                link.style.transform = 'translateY(10px)';
+            });
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+                // Reseta Hamburguer
+                document.getElementById('line-1').style.transform = 'none';
+                document.getElementById('line-2').style.opacity = '1';
+                document.getElementById('line-3').style.transform = 'none';
+            }, 500);
+        }
+
+        closeMenu.addEventListener('click', closeLuxuryMenu);
+
+        // Fecha menu ao clicar em qualquer link
+        menuLinks.forEach(link => link.addEventListener('click', closeLuxuryMenu));
+
+        // --- Lógica do Modal e WhatsApp ---
+        let currentService = "";
+        let currentPrice = "";
+
+        function openBooking(service, price) {
+            currentService = service;
+            currentPrice = price;
+            document.getElementById('modal-service-name').innerText = service;
+            document.getElementById('modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBooking() {
+            document.getElementById('modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const day = document.getElementById('weekday').value;
+            if(!day) { alert("Por favor, selecione um dia da semana."); return; }
+            const phoneNumber = "5511999999999";
+            const message = `Olá Zen Studio! 👋%0A%0AGostaria de reservar o procedimento: *${currentService}*%0AValor: *R$ ${currentPrice}*%0ADia de preferência: *${day}*%0A%0AAguardo confirmação de horário!`;
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+            closeBooking();
+        });
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) closeBooking();
+        }
+    </script>
+</body>
+</html>
